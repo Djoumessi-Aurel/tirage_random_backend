@@ -38,8 +38,9 @@ const app = express()
 app.use(cors());
 
 app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(express.json())
 
 const PORT = process.env.PORT || 8080
 

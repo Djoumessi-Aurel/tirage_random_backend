@@ -12,12 +12,12 @@ const personneSchema = new mongoose.Schema({
     a_tire: {
         type: String,
         trim: true,
+        required: false,
     },
     date_tirage: {
         type: Date,
+        required: false,
     }, 
-}, { 
-    timestamps: { createdAt: 'dateCreation', updatedAt: 'dateModification' } 
-    })
+})
 
 module.exports = mongoose.model('Personne', personneSchema)

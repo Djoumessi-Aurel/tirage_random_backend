@@ -3,10 +3,10 @@ const router = express.Router()
 
 const AdminController = require('../Controllers/PersonneController')
 
-router.post('/store', AdminController.store)
-router.get('/all', AdminController.showAll)
+router.post('/', AdminController.store)
+router.get('/', AdminController.showAll)
 router.get('/:id', AdminController.showById)
-router.delete('/destroy/:id', AdminController.destroy)
+router.delete('/:id', AdminController.destroy)
 
 router.post('/tirer', AdminController.tirerPersonne)
 
